@@ -28,11 +28,11 @@ public class Cloud_Firestore_Example : MonoBehaviour
     {
         
     }
-			
+	
 	//Grab all data or set query on which data you grab		
 	void Grab()
     {
-			
+		
 		// Enter in Your Collection's name
 		Firebase.Firestore.Query query = db.Collection("YourCollectionName");
 		
@@ -45,12 +45,9 @@ public class Cloud_Firestore_Example : MonoBehaviour
 				Debug.Log(documentSnapshot.Id);
 		
 				Dictionary<string, object> data = documentSnapshot.ToDictionary();
-				Text_Example.Add(data["Document_String_Name"].ToString());
-		
+				Text_Example.Add(data["Document_Field_Name"].ToString());
 			};
-
 		});
-		
 	}
 	
 	//Grab data by document name 
@@ -62,15 +59,12 @@ public class Cloud_Firestore_Example : MonoBehaviour
 
 		ListenerRegistration listener = docRef.Listen(snapshot =>
 		{
-				Debug.Log(snapshot.Id);
+			Debug.Log(snapshot.Id);
 		
-				Dictionary<string, object> data = snapshot.ToDictionary();
-		
-				string Grab_Text2 = data["Document_String_Name"].ToString();
-				Text_Example2.text = Grab_Text2;
-
+			Dictionary<string, object> data = snapshot.ToDictionary();
+			string Grab_Text2 = data["Document_Field_Name"].ToString();
+			Text_Example2.text = Grab_Text2;
 		});
-		
 	}
 	
 	//Write data to cloud firestore
@@ -79,13 +73,13 @@ public class Cloud_Firestore_Example : MonoBehaviour
     {
 		
 		CollectionReference colRef = db.Collection("YourCollectionName");
-		colRef.Document("WriteData").SetAsync(new Dictionary<string, object>(){
+		colRef.Document("WriteData").SetAsync(new Dictionary<string, object>()
+		{
 			
-		//Write in Data
-        { "Document_String_Name", "Data" },
-		{ "Name", "Derived" }
+			//Write in Data
+			{ "Document_Field_Name", "Data" },
+			{ "Name", "Derived" }
 
 		});
-		
 	}
 }
