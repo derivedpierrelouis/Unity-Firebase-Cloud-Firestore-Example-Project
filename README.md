@@ -10,7 +10,9 @@ Step 3: Add in app's package name, this project's Package name is com.DefaultCom
 Step 4: Download the file/s given and add them to the asset folder.
 
 Step 5: You don't need to install the analytics package to unity, but you may download it for safe keeping, if needed in the future.
+
 You are almost done.
+
 
 Next Step: Create a database and select production ready.
 
@@ -19,7 +21,17 @@ Next Step: Create a database and select production ready.
 2.Take a look at the example script in unity and change the collection name, document name, and document string field name to whatever you want and is writen in your database.
 
 DONE!
+.
 
+.
+
+.
+
+.
+
+.
+
+.
 
 
 How to Set up your own project like this:
