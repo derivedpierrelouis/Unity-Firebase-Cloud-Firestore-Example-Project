@@ -19,7 +19,7 @@ public class Cloud_Firestore_Example : MonoBehaviour
     {
 		db = FirebaseFirestore.DefaultInstance;
 
-        Grab();
+		Grab();		
 		Grab2();
     }
 
@@ -62,8 +62,7 @@ public class Cloud_Firestore_Example : MonoBehaviour
 			Debug.Log(snapshot.Id);
 		
 			Dictionary<string, object> data = snapshot.ToDictionary();
-			string Grab_Text2 = data["Document_Field_Name"].ToString();
-			Text_Example2.text = Grab_Text2;
+			Text_Example2.text = data["Document_Field_Name"].ToString();
 		});
 	}
 	
