@@ -44,7 +44,7 @@ How to Set up your own project like this:
 
 4.Another window should pop up, click apply.
 
-5.Depending if your build is on android/ios or not, a window should pop up telling you to resolve your dependencies, DO NOT RESOLVE dependencies.
+5.Depending if your build is on android/ios or not, a window should pop up telling you to enable auto-resolution, just click disable.
 
 6.Create a firebase project
 
