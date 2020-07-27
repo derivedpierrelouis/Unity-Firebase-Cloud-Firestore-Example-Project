@@ -40,7 +40,7 @@ How to Set up your own project like this:
 
 2.Update TextMeshPro to 2.1.0 in package manager.
 
-3.A window should pop up, Update the dependencies.
+3.A window should pop up, click Add selected registries.
 
 4.Another window should pop up, click apply.
 
